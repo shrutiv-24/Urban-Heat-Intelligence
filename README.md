@@ -35,39 +35,6 @@ UHI| Urban Heat Island
 - Satellite Data Processing: Google Earth Engine
 - Version Control: Git and GitHub
 
-📁 Project Structure
-
-Urban-Heat-Intelligence/
-│
-├── data/
-│   ├── raw/
-│   │   ├── Delhi_LST_Map.tif
-│   │   ├── Delhi_NDVI_Map.tif
-│   │   └── Delhi_UHI_Map.tif
-│   │
-│   └── processed/
-│       └── urban_heat_data.csv
-│
-├── models/
-│   ├── Linear_Regression.joblib
-│   ├── Random_Forest.joblib
-│   ├── model_description.md
-│   └── train_model.py
-│
-├── results/
-│   ├── Delhi_Urban_Heat_Report.docx
-│   ├── heat_categories.png
-│   ├── ndvi_heat_analysis.png
-│   ├── temperature_distribution.png
-│   └── urban_heat_predictions.csv
-│
-├── check_rasters.py
-├── extract_raster_data.py
-├── urban_heat_intelligence.py
-├── requirements.txt
-├── README.md
-├── .gitignore
-└── .gitattributes
 
 ⚙️ Installation & Running
 
@@ -161,7 +128,3 @@ GitHub: "@shrutiv-24" (https://github.com/shrutiv-24)
 Project Repository: "Delhi Urban Heat Intelligence" (https://github.com/shrutiv-24/Urban-Heat-Intelligence)
 
 ---
-
-⭐ If you find this project interesting, consider giving the repository a star!
-
-Developed for educational, research, and analytical purposes.
