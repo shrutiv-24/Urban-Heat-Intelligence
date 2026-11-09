@@ -17,8 +17,8 @@ for filename in os.listdir(RASTER_DIR):
             print("Offset:", src.offsets)
             print("Tags:", src.tags())
 
-            data = src.read(1, masked=True)
+            data = src.read(1)
 
-            print("Minimum:", data.min())
-            print("Maximum:", data.max())
-            print("Mean:", data.mean())
+        print("Minimum:", np.nanmin(data))
+        print("Maximum:", np.nanmax(data))
+        print("Mean:", np.nanmean(data))

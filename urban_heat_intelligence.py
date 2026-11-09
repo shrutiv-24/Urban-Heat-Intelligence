@@ -14,7 +14,7 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 data = pd.read_csv(DATA_PATH)
 model = joblib.load(MODEL_PATH)
 
-features = ["ndvi", "uhi"]
+features = ["ndvi"]
 X = data[features]
 
 predictions = model.predict(X)
@@ -23,7 +23,7 @@ data["predicted_lst"] = predictions
 
 data["heat_category"] = pd.cut(
     predictions,
-    bins=[-np.inf, 25, 35, 45, np.inf],
+    bins=[-np.inf, 40, 42, 44, np.inf],
     labels=["Low", "Moderate", "High", "Extreme"]
 )
 
@@ -45,7 +45,7 @@ plt.close()
 
 plt.figure(figsize=(10, 6))
 sns.scatterplot(
-    data=data,
+    data=data.sample(min(20000, len(data)), random_state=42),
     x="ndvi",
     y="predicted_lst",
     hue="heat_category"

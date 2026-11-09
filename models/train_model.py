@@ -14,10 +14,12 @@ os.makedirs(MODEL_DIR, exist_ok=True)
 
 data = pd.read_csv(DATA_PATH)
 
-features = ["ndvi", "uhi"]
+features = ["ndvi"]
 target = "lst_c"
 
 data = data.dropna(subset=features + [target])
+
+data = data.sample(n=min(300000, len(data)), random_state=42)
 
 X = data[features]
 y = data[target]
@@ -29,6 +31,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 models = {
     "Random_Forest": RandomForestRegressor(
         n_estimators=100,
+        min_samples_leaf=20,
         random_state=42,
         n_jobs=-1
     ),
