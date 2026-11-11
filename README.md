@@ -47,19 +47,19 @@ The project explores the relationship between Land Surface Temperature (LST), No
 ```
 Urban-Heat-Intelligence/
 ├── data/
-│   ├── raw/                       # GeoTIFF files exported from Google Earth Engine
+│   ├── raw/                       
 │   └── processed/
-│       └── urban_heat_data.csv    # pixel-level dataset
+│       └── urban_heat_data.csv    
 ├── models/
-│   ├── train_model.py             # trains the models
+│   ├── train_model.py            
 │   ├── Random_Forest.joblib
 │   ├── Linear_Regression.joblib
 │   └── model_description.md
-├── results/                       # charts, predictions and the project report
-├── earth_engine_script.js         # Google Earth Engine code
-├── check_rasters.py               # checks the exported rasters
-├── extract_raster_data.py         # builds the pixel dataset from the rasters
-├── urban_heat_intelligence.py     # predictions, heat categories and charts
+├── results/                       
+├── earth_engine_script.js         
+├── check_rasters.py               
+├── extract_raster_data.py        
+├── urban_heat_intelligence.py     
 ├── requirements.txt
 └── README.md
 ```
